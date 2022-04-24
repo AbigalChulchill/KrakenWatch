@@ -11,7 +11,6 @@ from datetime import datetime
 from config import *
 
 cross_chain_buyback_address = "0x3BB730E6f651007F2963B627C0D992CFC120a352"
-avax_api_key = "628KWG3J86CSM7KHTR4HQ3GVQF2R75E2BF"
 async def main():
   avax_block = open('/home/pi/kraken_watch/avax_start_block.txt', 'r')
   avax_start_block = int(avax_block.read()) + 1
@@ -26,7 +25,7 @@ async def main():
 
   print("Connecting to Telegram Bot...")
   try:
-    bot = telegram.Bot(token='5196129266:AAE4O7naJ5rj6ewu_FnSByipQWswbAPmvxA')
+    bot = telegram.Bot(token='')
     print("Success!")
   except telegram.Error as e:
     print(f"Error connecting to Telegram: {e}")
